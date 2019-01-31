@@ -6,9 +6,9 @@ from netmiko import Netmiko
 cisco_nxos = {
     'device_type': 'cisco_nxos',
     'ip': '10.214.128.6',
-    'username': 'admin',
-    'password': '1qaz2wsx;',
-    'secret': 'b00nesw1ne',
+    'username': 'username',
+    'password': 'password',
+    'secret': 'secret',
 }
 
 net_connect = Netmiko(**cisco_nxos)
