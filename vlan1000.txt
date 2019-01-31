@@ -1,1 +1,1 @@
-no username TESTADMIN privilege 15 password TESTTEST
+no username TESTADMIN privilege 15 password TESTtest123

@@ -6,33 +6,33 @@ from netmiko import Netmiko
 cisco_riv200 = {
     'device_type': 'cisco_ios',
     'ip': '10.214.128.200',
-    'username': 'joes87',
-    'password': 'Andrea;02$',
-    'secret': 'b00nesw1ne',
+    'username': 'username',
+    'password': 'password',
+    'secret': 'secret',
 }
 
 cisco_riv201 = {
     'device_type': 'cisco_ios',
     'ip': '10.214.128.201',
-    'username': 'joes87',
-    'password': 'Andrea;02$',
-    'secret': 'b00nesw1ne',
+    'username': 'username',
+    'password': 'username',
+    'secret': 'secret',
 }
 
 cisco_riv202 = {
     'device_type': 'cisco_ios',
     'ip': '10.214.128.202',
-    'username': 'joes87',
-    'password': 'Andrea;02$',
-    'secret': 'b00nesw1ne',
+    'username': 'username',
+    'password': 'password',
+    'secret': 'secret',
 }
 
 cisco_riv203 = {
     'device_type': 'cisco_ios',
     'ip': '10.214.128.203',
-    'username': 'joes87',
-    'password': 'Andrea;02$',
-    'secret': 'b00nesw1ne',
+    'username': 'username',
+    'password': 'password',
+    'secret': 'secret',
 }
 
 for cisco_access_riv in (cisco_riv200, cisco_riv201, cisco_riv202, cisco_riv203):
