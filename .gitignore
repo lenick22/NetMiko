@@ -2,4 +2,5 @@
 *.txt
 vlan1000.txt
 NexusConfig
+.bash_profile
 
