@@ -4,3 +4,9 @@ vlan1000.txt
 NexusConfig
 .bash_profile
 
+# PIP Files
+*Pipfile
+
+# Python Files
+NxOS_Config
+TEST.py
