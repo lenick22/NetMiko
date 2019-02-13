@@ -8,5 +8,5 @@ NexusConfig
 *Pipfile
 
 # Python Files
-NxOS_Config
-TEST.py
+*NxOS_Config.py
+*TEST.py
