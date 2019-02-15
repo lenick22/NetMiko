@@ -40,7 +40,7 @@ for cisco_access_riv in (cisco_riv200, cisco_riv201, cisco_riv202, cisco_riv203)
     net_connect = Netmiko(**cisco_access_riv)
     net_connect.enable()
     output = net_connect.send_config_from_file('vlan1000.txt')
-print(output)
+print((cisco_riv200)output)
 
 net_connect.disconnect()
 
