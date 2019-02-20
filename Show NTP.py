@@ -140,7 +140,7 @@ GDOGW = {
 GDPGW = {
     'device_type': 'cisco_ios_telnet',
     'ip': '10.96.1.1',
-    'username': os.environ.get('USER_NAME'),
+    'username': 'joes87',
     'password': os.environ.get('PASS'),
     'secret': os.environ.get('ENABLE'),
 }
@@ -154,31 +154,12 @@ GJHGW = {
     'secret': os.environ.get('ENABLE'),
 }
 
-GDFGW = {
-    'device_type': 'cisco_ios',
-    'ip': '10.48.1.1',
-    'username': os.environ.get('USER_NAME'),
-    'password': os.environ.get('PASS'),
-    'secret': os.environ.get('ENABLE'),
-}
-
-GDMGW = {
-    'device_type': 'cisco_ios',
-    'ip': '10.76.1.1',
-    'username': os.environ.get('USER_NAME'),
-    'password': os.environ.get('PASS'),
-    'secret': os.environ.get('ENABLE'),
-}
-
-
-for REMOTE_SITES in (GDAGW, GIFGW, GKEGW, GKFGW, GKGGW, GIEGW, GIHGW, GIIGW, GDLGW, GJAGW, GJBGW, GJCGW, GJEGW, GJFGW, GDBGW, GDNGW, GDOGW, GDPGW, GJHGW, GDFGW, GDMGW,):
+for REMOTE_SITES in (GDAGW, GIFGW, GKEGW, GKFGW, GKGGW, GIEGW, GIHGW, GIIGW, GDLGW, GJAGW, GJBGW, GJCGW, GJEGW, GJFGW, GDBGW, GDNGW, GDOGW, GDPGW, GJHGW,):
     net_connect = ConnectHandler(**REMOTE_SITES)
-    net_connect.enable()  #get user past the enable
-    output = net_connect.send_config_from_file('vlan1000.txt')
-    write = net_connect.send_command("write mem")
+    net_connect.enable()
+    show = net_connect.send_command("show version")
     print(net_connect.find_prompt()) #Prints out all the routers listed above
-    print(output) #prints the output from the command vlan100
-    print(write)
+    print(show)
 
 
 net_connect.disconnect()
