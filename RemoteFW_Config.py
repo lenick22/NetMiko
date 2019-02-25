@@ -75,7 +75,7 @@ GDBFW = {
     'secret': os.environ.get('FWPASS'),
 }
 
-GDMGW = {
+GDMFW = {
     'device_type': 'cisco_ios',
     'ip': '10.76.1.254',
     'username': os.environ.get('FWUSER'),
@@ -172,8 +172,10 @@ GIFFW = {
 for REMOTE_SITES in (GDAFW, GKEFW, GKGFW, GIEFW, GIHFW, GDLFW, GJBFW, GJCFW, GDBFW, GDMFW, GIIFW, GJAFW, GJEFW, GJFFW, GDNFW, GDOFW, GDPFW, GJHFW, GDFFW, GKFFW, GIFFW,):
     net_connect = ConnectHandler(**REMOTE_SITES)
     net_connect.enable()  #get user past the enable
-    output = net_connect.send_config_from_file('vlan1000.txt')
+    output = net_connect.send_config_from_file('NTP_Settings')
+    write = net_connect.send_command("write mem")
     print(net_connect.find_prompt()) #Prints out all the routers listed above
     print(output) #prints the output from the command vlan100
+    print(write)
 
 net_connect.disconnect()

@@ -1,0 +1,4 @@
+clock timezone EST -5
+service timestamps log datetime msec localtime show-timezone
+ntp server 10.214.16.13
+ntp server 10.214.16.14

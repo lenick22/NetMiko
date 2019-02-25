@@ -9,9 +9,9 @@ password = getpass()
 
 rivsw_202 = {
     "host": "10.214.128.202",
-    "username": 'joes87',
-    "password": password,
-    "secret": "b00nesw1ne",
+    "username": 'USER',
+    "password": 'PASSWORD',
+    "secret": "ENABLE",
     "device_type": "cisco_ios",
 }
 
