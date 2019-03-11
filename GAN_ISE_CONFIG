@@ -1,0 +1,8 @@
+radius-server host 10.46.128.127 auth-port 1645 acct-port 1646 key **p3@pOd!!
+no radius-server host 10.215.215.125 auth-port 1645 acct-port 1646 key 7 024C4E4B58261F0E480F48
+No radius-server host 10.46.211.125 auth-port 1645 acct-port 1646 key 7 086B065E5A391538164A4D
+
+aaa group server radius RADIUS-Servers
+server 10.46.128.127 auth-port 1645 acct-port 1646
+No server 10.215.215.125 auth-port 1645 acct-port 1646
+No server 10.46.211.125 auth-port 1645 acct-port 1646

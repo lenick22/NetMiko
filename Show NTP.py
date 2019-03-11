@@ -3,7 +3,7 @@ from __future__ import print_function, unicode_literals
 import os
 from netmiko import ConnectHandler
 
-
+#shows the NTP status of remote wareroom GWs
 
 GDAGW = {
     'device_type': 'cisco_ios_telnet',
@@ -98,7 +98,7 @@ GJCGW = {
 }
 
 GJEGW = {
-    'device_type': 'cisco_ios_telnet',
+    'device_type': 'cisco_ios',
     'ip': '10.64.1.1',
     'username': os.environ.get('USER_NAME'),
     'password': os.environ.get('PASS'),
@@ -157,7 +157,7 @@ GJHGW = {
 for REMOTE_SITES in (GDAGW, GIFGW, GKEGW, GKFGW, GKGGW, GIEGW, GIHGW, GIIGW, GDLGW, GJAGW, GJBGW, GJCGW, GJEGW, GJFGW, GDBGW, GDNGW, GDOGW, GDPGW, GJHGW,):
     net_connect = ConnectHandler(**REMOTE_SITES)
     net_connect.enable()
-    show = net_connect.send_command("show version")
+    show = net_connect.send_command("traceroute 10.214.96.1")
     print(net_connect.find_prompt()) #Prints out all the routers listed above
     print(show)
 
